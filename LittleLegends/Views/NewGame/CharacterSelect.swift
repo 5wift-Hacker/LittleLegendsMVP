@@ -19,6 +19,7 @@ struct Character: Identifiable {
             var id = UUID()
             var thumbnail: String
             var pageImage: String
+            var questionImage: String
             var pageText: String
             var questionID: String
             
@@ -36,12 +37,12 @@ let characters: [Character] = [
             issueCover: "buttonissue1ash",
             pages: [
                 
-                Character.Comic.Page(thumbnail: "buttonp1ash", pageImage: "ashp1", pageText: "Ash accidentally knocks over the gnomes' bridge.", questionID: "c1_p1"),
-                Character.Comic.Page(thumbnail: "buttonp2ash", pageImage: "ashp2", pageText: "Ash tries to hammer the bridge but struggles.", questionID: "c1_p2"),
-                Character.Comic.Page(thumbnail: "buttonp3ash", pageImage: "ashp3", pageText: "Ash bends nails, the bridge cracks, and he yells as gnomes glare", questionID: "c1_p3"),
-                Character.Comic.Page(thumbnail: "buttonp4ash", pageImage: "ashp4", pageText: "Bridge cracks further, everyone stares at Ash.", questionID: "c1_p4"),
-                Character.Comic.Page(thumbnail: "buttonp5ash", pageImage: "ashp5", pageText: "Ash storms off in snow, yelling.", questionID: "c1_p5"),
-                Character.Comic.Page(thumbnail: "buttonp6ash", pageImage: "ashp6", pageText: "Ash stomps alone in the snow.", questionID: "c1_p6")
+                Character.Comic.Page(thumbnail: "buttonp1ash", pageImage: "ashp1", questionImage: "q1panel", pageText: "Ash accidentally knocks over the gnomes' bridge.", questionID: "c1_p1"),
+                Character.Comic.Page(thumbnail: "buttonp2ash", pageImage: "ashp2", questionImage: "q2panel", pageText: "Ash tries to hammer the bridge but struggles.", questionID: "c1_p2"),
+                Character.Comic.Page(thumbnail: "buttonp3ash", pageImage: "ashp3", questionImage: "q3panel", pageText: "Ash bends nails, the bridge cracks, and he yells as gnomes glare", questionID: "c1_p3"),
+                Character.Comic.Page(thumbnail: "buttonp4ash", pageImage: "ashp4", questionImage: "q4panel", pageText: "Bridge cracks further, everyone stares at Ash.", questionID: "c1_p4"),
+                Character.Comic.Page(thumbnail: "buttonp5ash", pageImage: "ashp5", questionImage: "q5panel", pageText: "Ash storms off in snow, yelling.", questionID: "c1_p5"),
+                Character.Comic.Page(thumbnail: "buttonp6ash", pageImage: "ashp6", questionImage: "q6panel", pageText: "Ash stomps alone in the snow.", questionID: "c1_p6")
             ])
     ]),
     Character(image: "buttonmica", comics: [])

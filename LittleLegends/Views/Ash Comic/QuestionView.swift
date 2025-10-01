@@ -7,6 +7,9 @@ struct QuestionView: View {
     let incorrectEmotions: [ChosenEmotion]
     let pages: [Character.Comic.Page]
     let currentPageIndex: Int
+    
+    @State var isPulsing: Bool = false
+    
     @Binding var responses: [(questionID: String, chosenEmotion: ChosenEmotion, isCorrect: Bool)]
     @Binding var navPath: NavigationPath
     
@@ -26,7 +29,7 @@ struct QuestionView: View {
             Image(image)
                 .resizable()
                 .scaledToFit()
-                .frame(maxHeight: 300)
+                .frame(maxHeight: 450)
             
             Text(question)
                 .font(.title)
@@ -67,20 +70,36 @@ struct QuestionView: View {
                 .disabled(selectedEmotion != nil)
             }
             
-            if selectedEmotion != nil {
-                NavigationLink {
-                    if let nextPage = nextPage {
-                        PageView(page: nextPage, pages: pages, currentPageIndex: currentPageIndex + 1, responses: $responses, navPath: $navPath)
-                    } else {
-                        ComicCompletedView(responses: responses, totalQuestions: pages.count, navPath: $navPath)
-                    }
-                } label: {
-                    AshNextButtonView()
+            VStack {
+                if selectedEmotion != nil {
+                    
+                        NavigationLink {
+                            if let nextPage = nextPage {
+                                PageView(page: nextPage, pages: pages, currentPageIndex: currentPageIndex + 1, responses: $responses, navPath: $navPath)
+                                    
+                            } else {
+                                ComicCompletedView(responses: responses, totalQuestions: pages.count, navPath: $navPath)
+                            }
+                        } label: {
+                            AshNextButtonView()
+                                .scaleEffect(isPulsing ? 1.1 : 1.0)
+                                .onAppear {
+                                    withAnimation(.easeInOut(duration: 0.8).repeatForever(autoreverses: true)) {
+                                        isPulsing = true // Start pulsing when the button appears
+                                    }
+                                }
+                        }
+                        .padding(.top, 75)
                 }
-                .padding(.top, 20)
             }
+            .frame(width: 100, height: 100)
+            .animation(.easeIn(duration: 0.2), value: selectedEmotion)
+            
+            .onDisappear {
+                isPulsing = false
+            }
+            LittleLegendsTextView()
         }
-        .padding()
         .onAppear {
             print("QuestionView: currentPageIndex = \(currentPageIndex), pages.count = \(pages.count), responses.count = \(responses.count)")
         }
@@ -101,16 +120,16 @@ struct QuestionView: View {
     NavigationStack {
         QuestionView(
             question: "How do you feel?",
-            image: "ashp1",
+            image: "q1panel",
             correctEmotion: .q1CA,
             incorrectEmotions: [.q1IA2, .q1IA1],
             pages: [
-                Character.Comic.Page(thumbnail: "buttonp1ash", pageImage: "ashp1", pageText: "", questionID: "c1_p1"),
-                Character.Comic.Page(thumbnail: "buttonp2ash", pageImage: "ashp2", pageText: "", questionID: "c1_p2"),
-                Character.Comic.Page(thumbnail: "buttonp3ash", pageImage: "ashp3", pageText: "", questionID: "c1_p3"),
-                Character.Comic.Page(thumbnail: "buttonp4ash", pageImage: "ashp4", pageText: "", questionID: "c1_p4"),
-                Character.Comic.Page(thumbnail: "buttonp5ash", pageImage: "ashp5", pageText: "", questionID: "c1_p5"),
-                Character.Comic.Page(thumbnail: "buttonp6ash", pageImage: "ashp6", pageText: "", questionID: "c1_p6")
+                Character.Comic.Page(thumbnail: "buttonp1ash", pageImage: "ashp1", questionImage: "q1panel", pageText: "", questionID: "c1_p1"),
+                Character.Comic.Page(thumbnail: "buttonp2ash", pageImage: "ashp2", questionImage: "q2panel", pageText: "", questionID: "c1_p2"),
+                Character.Comic.Page(thumbnail: "buttonp3ash", pageImage: "ashp3", questionImage: "q3panel", pageText: "", questionID: "c1_p3"),
+                Character.Comic.Page(thumbnail: "buttonp4ash", pageImage: "ashp4", questionImage: "q4panel", pageText: "", questionID: "c1_p4"),
+                Character.Comic.Page(thumbnail: "buttonp5ash", pageImage: "ashp5", questionImage: "q5panel", pageText: "", questionID: "c1_p5"),
+                Character.Comic.Page(thumbnail: "buttonp6ash", pageImage: "ashp6", questionImage: "q6panel", pageText: "", questionID: "c1_p6")
             ],
             currentPageIndex: 3,
             responses: .constant([]),

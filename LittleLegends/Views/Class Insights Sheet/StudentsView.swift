@@ -46,20 +46,28 @@ struct StudentsView: View {
     var body: some View {
         
         VStack {
-            //inserted last session issue id and issue name
-            Text("Issue \(displayComicID): \(lastComicPlayed)")
-                .font(.title3)
-                .bold()
-            //inserted last session date
-            Text("Last Session: \(dateFormatter())")
+            VStack {
+                //inserted last session issue id and issue name
+                Text("Issue \(displayComicID): \(lastComicPlayed)")
+                    .font(.title3)
+                    .bold()
+                //inserted last session date
+                Text("Last Session: \(dateFormatter())")
+            }
+            .padding()
+            .padding(.horizontal, 30)
+            .background(.white)
+            .clipShape(.capsule)
             
             HStack{
                 Spacer()
                 Text("Correct Answers")
                     .font(.title3)
                     .bold()
-                    .padding(.horizontal, 45)
+                    .padding(.horizontal)
+                    .background(.white, in: RoundedRectangle(cornerRadius: 10))
             }
+            .padding()
         }
         .padding(.top, 30)
         .background(Color.background)

@@ -7,6 +7,15 @@
 
 import Foundation
 
+// Points system configuration
+let pointsPerCorrectAnswer: Int = 200
+
+// Computes total points for a given student based on correct responses.
+func pointsForStudent(_ studentID: String, from responses: [Responses]) -> Int {
+    let correctCount = responses.filter { $0.studentID == studentID && $0.isCorrect }.count
+    return correctCount * pointsPerCorrectAnswer
+}
+
 struct MockQuestions: Identifiable {
     var id: String { questionID }
     var questionID: String

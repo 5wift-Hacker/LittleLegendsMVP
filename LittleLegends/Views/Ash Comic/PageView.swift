@@ -41,7 +41,7 @@ struct PageView: View {
                     NavigationLink {
                         QuestionView(
                             question: question.questionText,
-                            image: page.pageImage,
+                            image: page.questionImage,
                             correctEmotion: question.correctEmotion,
                             incorrectEmotions: question.answerOptions.filter { $0 != question.correctEmotion },
                             pages: pages,
@@ -51,6 +51,7 @@ struct PageView: View {
                         )
                     } label: {
                         AshNextButtonView()
+                            .padding(.bottom, 10)
                     }
                 } else {
                     NavigationLink {
@@ -94,14 +95,14 @@ extension Array {
 #Preview {
     NavigationStack {
         PageView(
-            page: Character.Comic.Page(thumbnail: "ashp1", pageImage: "ashp1", pageText: "", questionID: "c1_p1"),
+            page: Character.Comic.Page(thumbnail: "ashp1", pageImage: "ashp1", questionImage: "q1panel", pageText: "", questionID: "c1_p1"),
             pages: [
-                Character.Comic.Page(thumbnail: "buttonp1ash", pageImage: "ashp1", pageText: "", questionID: "c1_p1"),
-                Character.Comic.Page(thumbnail: "buttonp2ash", pageImage: "ashp2", pageText: "", questionID: "c1_p2"),
-                Character.Comic.Page(thumbnail: "buttonp3ash", pageImage: "ashp3", pageText: "", questionID: "c1_p3"),
-                Character.Comic.Page(thumbnail: "buttonp4ash", pageImage: "ashp4", pageText: "", questionID: "c1_p4"),
-                Character.Comic.Page(thumbnail: "buttonp5ash", pageImage: "ashp5", pageText: "", questionID: "c1_p5"),
-                Character.Comic.Page(thumbnail: "buttonp6ash", pageImage: "ashp6", pageText: "", questionID: "c1_p6")
+                Character.Comic.Page(thumbnail: "buttonp1ash", pageImage: "ashp1", questionImage: "q1panel", pageText: "", questionID: "c1_p1"),
+                Character.Comic.Page(thumbnail: "buttonp2ash", pageImage: "ashp2", questionImage: "q2panel", pageText: "", questionID: "c1_p2"),
+                Character.Comic.Page(thumbnail: "buttonp3ash", pageImage: "ashp3", questionImage: "q3panel", pageText: "", questionID: "c1_p3"),
+                Character.Comic.Page(thumbnail: "buttonp4ash", pageImage: "ashp4", questionImage: "q4panel", pageText: "", questionID: "c1_p4"),
+                Character.Comic.Page(thumbnail: "buttonp5ash", pageImage: "ashp5", questionImage: "q5panel", pageText: "", questionID: "c1_p5"),
+                Character.Comic.Page(thumbnail: "buttonp6ash", pageImage: "ashp6", questionImage: "q6panel", pageText: "", questionID: "c1_p6")
             ],
             currentPageIndex: 3,
             responses: .constant([]),

@@ -21,13 +21,16 @@ struct ClassInsightsView: View {
         
         ScrollView {
             VStack {
-                //total correctt answwers
+                //total correctt answers
                 let totalCorrect = responses.filter { $0.isCorrect }.count
                 Text("Total Correct Answers \(totalCorrect) / \(responses.count)")
                     .font(.headline)
-                    .foregroundStyle(.text)
-                    .padding(.top, 30)
-                    .padding(.bottom, 10)
+                    .foregroundStyle(.white)
+                    .padding()
+                    .padding(.horizontal)
+                    .background(.black.opacity(0.8))
+                    .clipShape(.capsule)
+                    .padding()
                 
                 //class wide average for comic 1
                 let classAverage = classAverageForComic(comicID: "c1")

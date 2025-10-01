@@ -15,15 +15,17 @@ struct CircularProgressView: View {
         ZStack {
             // Background circle (gray)
             Circle()
-                .stroke(lineWidth: 40)
+                .stroke(lineWidth: 30)
                 .frame(width: 150, height: 150)
                 .foregroundStyle(.gray.gradient)
+                .shadow(radius: 5)
             
             // Progress circle (green, animates clockwise)
             Circle()
                 .trim(from: 0, to: animatedPercentage / 100)
                 .stroke(lineWidth: 40)
                 .frame(width: 150, height: 150)
+                .shadow(color: .blue, radius: 5)
                 .foregroundStyle(.blue.gradient)
                 .rotationEffect(.degrees(-90)) // Start at 12 o'clock
                 .animation(.easeInOut(duration: 1.5), value: animatedPercentage)
