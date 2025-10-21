@@ -20,7 +20,6 @@ A start-up SwiftUI app being built for Little Legends. We are working toward a f
 |-----------------------------|-------------------------------|
 | <img src="https://github.com/user-attachments/assets/1a83eb17-f324-4d50-aa58-33b85a340ec6" width="300" alt="Fetching a Random Quote"> | <img src="https://github.com/user-attachments/assets/69487185-c540-4265-85cf-d14e0fc77a36" width="300" alt="Fetching a Random Episode">
 
-- 
 ## 📝 License
 
 No shared license. Copyright.
