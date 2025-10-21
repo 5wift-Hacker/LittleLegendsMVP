@@ -1,6 +1,6 @@
-# Breaking Bad Quotes
+# Little Legends
 
-A portfolio SwiftUI app showcasing modern iOS development with a Breaking Bad theme. Tap to get random quotes or episodes from *Breaking Bad*, *Better Call Saul*, and *El Camino*. Highlights include seamless API integration in Swift, Apple's Liquid Glass tab bar for fluid navigation, and a clean, visually appealing design.
+A start-up SwiftUI app being built for Little Legends. We are working toward a full-fledged working prototype. This app is 
 
 ## ✨ Main Features
 
@@ -18,6 +18,9 @@ A portfolio SwiftUI app showcasing modern iOS development with a Breaking Bad th
 | Using the App (Quote Fetch) | Using the App (Image Fetch) |
 |-----------------------------|-------------------------------|
 | <img src="https://github.com/user-attachments/assets/a57cb0ec-56bb-4a63-aac9-28200fb51c8a" width="300" alt="Fetching a Random Quote"> | <img src="https://github.com/user-attachments/assets/89774dec-d18a-44d8-8f7c-bfba78611a12" width="300" alt="Fetching a Random Episode">
+
+![info screen](https://github.com/user-attachments/assets/194feea0-58b5-4485-8e37-e3d758eaaf2f)
+
 
 
 ## 🛠 Tech Stack
