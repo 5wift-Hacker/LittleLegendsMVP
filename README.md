@@ -1,36 +1,29 @@
 # Little Legends
 
-A start-up SwiftUI app being built for Little Legends. We are working toward a full-fledged working prototype. This app is 
+A start-up SwiftUI app being built for Little Legends. We are working toward a full-fledged working prototype. This app is being built for children to assist them in understanding their emotions more clearly. It will be marketed to the Australian schooling system.
 
 ## ✨ Main Features
 
-- **Random Quotes & Episodes**: Fetch and display content across all three series with intuitive taps.
-- **API Mastery**: Demonstrates efficient data fetching and parsing from the [Breaking Bad API](https://breakingbadapi.com/).
-- **Liquid Glass Tab Bar**: Fluid, glassy navigation powered by iOS 26's latest UI innovations.
-- **Polished Design**: Minimalist, immersive visuals for an engaging user experience.
+- **Gamified Animation**: Create fun animations throughout the app to make the tool feel like a game.
+- **Navigation**: This app utilizes significant movement and navigation throughout it, as you progress through the stories built-in.
+- **Data**: This app provides data to teachers in an easy-to-read fashion, and will provide more in the future.
+- **Unfinished**: Not the final version of the app, and is currently constantly changing in this build phase.
 
 ## Dynamic UI Features
 
-| Loading & Auto-Scrolling | Liquid Glass Tab Bar |
+| Login | Navigation |
 |---------------------------|----------------------|
-| <img src="INSERT GIF HERE" width="300" alt="Loading and Auto-Scrolling Animation"> | <img src="INSERT GIF HERE" width="300" alt="Liquid Glass Tab Bar in Action"> |
+| <img src="https://github.com/user-attachments/assets/457de37c-4924-470f-9822-19471dd7aa06" width="300" alt="Loading and Auto-Scrolling Animation"> | <img src="INSERT GIF HERE" width="300" alt="Liquid Glass Tab Bar in Action"> |
 
-| Using the App (Quote Fetch) | Using the App (Image Fetch) |
+
+| Gamified Animation | Data Views |
 |-----------------------------|-------------------------------|
-| <img src="INSERT GIF HERE" width="300" alt="Fetching a Random Quote"> | <img src="INSERT GIF HERE" width="300" alt="Fetching a Random Episode">
+| <img src="https://github.com/user-attachments/assets/1a83eb17-f324-4d50-aa58-33b85a340ec6" width="300" alt="Fetching a Random Quote"> | <img src="https://github.com/user-attachments/assets/69487185-c540-4265-85cf-d14e0fc77a36" width="300" alt="Fetching a Random Episode">
 
-## 🛠 Tech Stack
 
-- **Language**: Swift / SwiftUI
-- **API**: Breaking Bad API (quotes & episodes)
-- **UI Enhancement**: Apple's Liquid Glass tab bar
 
-## 🚀 Quick Start
 
-1. Clone the repo: `git clone <your-repo-url>`
-2. Open in Xcode: `open bbquotes.xcodeproj`
-3. Build & Run: Select iOS simulator or device (iOS 26+)
-
+- 
 ## 📝 License
 
-MIT License – feel free to fork and build upon it.
+No shared license. Copyright.
