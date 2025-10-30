@@ -13,8 +13,7 @@ A start-up SwiftUI app being built for Little Legends. We are working toward a f
 
 | Login | Navigation |
 |---------------------------|----------------------|
-| <img src="https://github.com/user-attachments/assets/457de37c-4924-470f-9822-19471dd7aa06" width="300" alt="Loading and Auto-Scrolling Animation"> | <img src="INSERT GIF HERE" width="300" alt="Navigation GIF"> |
-
+| <img src="https://github.com/user-attachments/assets/457de37c-4924-470f-9822-19471dd7aa06" width="300" alt="Loading and Auto-Scrolling Animation"> | <img src="https://github.com/user-attachments/assets/825ec0a0-eaa9-40af-aa51-ebaf3a9b5976" width="300" alt="Navigation GIF"> |
 
 | Gamified Animation | Data Views |
 |-----------------------------|-------------------------------|
